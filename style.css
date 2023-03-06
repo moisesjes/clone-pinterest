@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+ margin: 0%;
+ padding: 0%;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+}
+/* inicia encabezado con barra buscadora*/
+#navbar-pinterest{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;    
+    height: 60px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#navbar-pinterest > li{
+    list-style: none;
+    cursor: pointer;
+    padding: 1%;
+}
+
+.iconos-tamaño{    /*tamaño de los iconos y contenedor*/
+    width: 50px; 
+    cursor: pointer;
+    border: 2px solid white;
+    padding: 4px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+.iconos-tamaño:hover{     /*efecto de sombreado*/
+    cursor: pointer;
+    border: #efefef;
+    background-color: #efefef;
+    
+}
+
+#inicio{             /*menu inicio con su contenedor en negro*/
+    border: 0;
+    background-color: black;
+    border-radius: 20px;
+    margin-inline-start: 10px;
+
+  
+}
+
+#inicio-color{
+    color: white;
+   
+}
+
+.icono-flecha{
+    width: 10px;
+    height: 20px;
+}
+
+.flechas{
+    display: flex;
+    justify-items: flex-end;
+}
+
+#buscar{
+    width: 80%;
+    position: relative;
+    padding: 5%;
+}
+
+#buscar > input{
+    border: 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: -5px;
+    padding: 1%;
+    background-color: #e4e4e4;
+}
+/*termina el encabezado con barra buscadora*/
+
+#margenes-imagenes{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    /*grid-template-columns: repeat(auto-fill, 300px);*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    
+
+}
+
+.imagen-general{
+    width: 230px;
+    height: 460px;
+    border-radius: 10%;
+    object-fit: cover ;
+    grid-row: span 2;
+   
+}
+
+.iconos-imagen{
+    width: 20px;
+    
+}
+
+.carta{
+    width: 230px;
+    height: 460px;
+    border-radius: 31px;
+    position: relative;
+    cursor:zoom-in
+}
+.carta::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-out;
+  }
+
+.carta:hover::before {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+.carta:hover button {
+    display: inline-flex;
+  }
+.carta:hover .menu-infe {
+    display: flex;
+  }
+
+.menu-infe{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 10px;
+    border-style: none;
+    text-decoration: none;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: none;
+
+
+}
+
+.menu-infe img {
+    background-color: white;
+    font-size: 20px;
+    border-radius: 30%;
+    cursor:pointer
+    /*padding:0%*/
+} 
+
+.menu-infe button{
+    padding: 10px;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    border-style: none;
+    cursor:pointer ;
+    color: black;
+}
+
+@media screen and (max-width: 1024px) {
+    body #margenes-imagenes{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+}
+@media screen and (max-width: 768px) {
+    body #margenes-imagenes{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+}
+@media screen and (max-width: 425px) {
+    body #margenes-imagenes{
+    grid-template-columns: 1fr 1fr;
+}
+}
+
+@media screen and (max-width: 768px) {
+    nav #navbar-pinterest{
+        width: 50%;
+        display: flex;
+        justify-content: left;
+
+    }
+
+}
